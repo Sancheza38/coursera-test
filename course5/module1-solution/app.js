@@ -11,9 +11,7 @@
 				$scope.message = "Please enter data first";
 			} else {
 				var items = itemsInList($scope.dishes);
-				if (items == 0 || $scope.dishes == "") {
-					$scope.message = "Empty";
-				} else if (items <= 3) {
+				if (items <= 3) {
 					$scope.message = "Enjoy!";
 				} else {
 					$scope.message = "Too much!";
