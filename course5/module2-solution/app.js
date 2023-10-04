@@ -7,14 +7,13 @@ angular.model("ShoppingListCheckOff", [])
 .service('ShoppingListCheckOffService', ShoppingListCheckOffService);
 
 ToBuyController.$inject = ['ShoppingListCheckOffService'];
-function ToBuyController(ShoppingListCheckOffService){
+function ToBuyController(ShoppingListCheckOffService) {
 	var BuyItem = this;
 
 	BuyItem.items = ShoppingListCheckOffService.getToBuyItems();
 
 
 	var toBuyArray = ShoppingListCheckOffService.ToBuyItems();
-	BuyItem.items = ShoppingListCheckOffService.getItems();
 
 	BuyItem.removeItem = function () {
 		ShoppingListCheckOffService.removeItem()
@@ -58,5 +57,6 @@ function ShoppingListCheckOffService() {
 	service.getToBuyItems = function () {
 		return ToBuyItems;
 	};
-};
+}
+
 })();
