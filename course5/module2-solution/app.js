@@ -14,6 +14,7 @@ function ToBuyController(ShoppingListCheckOffService) {
 	
 	BuyItem.removeItem = function (index) {
 		ShoppingListCheckOffService.removeItem(index);
+
 	}
 }
 
@@ -22,7 +23,6 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
 	var BoughtItem = this;
 
 	BoughtItem.items = ShoppingListCheckOffService.getBoughtItems();
-
 }
 
 function ShoppingListCheckOffService() {
@@ -42,7 +42,6 @@ function ShoppingListCheckOffService() {
 
 	//List of BoughtItems
 	var BoughtItems = [];
-
 
 	service.removeItem = function (index) {
 		BoughtItems.push(ToBuyItems[index]);
