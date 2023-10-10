@@ -1,0 +1,14 @@
+<ui-view>
+    <div class="container">
+    <h1>My Info</h1>
+
+    <p>Favorite menu item</p>
+    <div class="alert alert-danger" ng-if="myInfoCtrl.favMenuItem == null">
+     Not Signed Up Yet. <a href="#/signUp">Sign up Now!</a>
+    </div>
+    <div ng-if="myInfoCtrl.favMenuItem != null">
+        <menu-item menu-item="myInfoCtrl.favMenuItem">
+        </menu-item>
+    </div>
+</div>
+</ui-view>
